@@ -163,18 +163,20 @@ This timers are in the same block and synchronized. But their output signal is
 different (TIOA0 and TIOA0). 
 * TIOA1 controls DAC.
 * TIOA0 controls ADC.
-The relation between the clocks are:
 
-	a   ______    ______    ______    ______    ______    ______    _ 
-	a__|      |__|      |__|      |__|      |__|      |__|      |__|     TIOA1
-	a     _________                     _________  
-	a    |         |_________          |         |          _________
-	a____|                   |_________|         |_________|         |   DAC1
-	a          _         _         _         _         _         _
-	a_________| |_______| |_______| |_______| |_______| |_______| |___   ADC clock
-	a          ____      ____      ____      ____      ____      ____
-	a_________|    |____|    |____|    |____|    |____|    |____|    |   TIOA0
-	
+The relation between the clocks are
+
+	a                                                                              a
+	a   ______    ______    ______    ______    ______    ______    _              a
+	a__|      |__|      |__|      |__|      |__|      |__|      |__|     TIOA1     a
+	a     _________                     _________                                  a
+	a    |         |_________          |         |          _________              a
+	a____|                   |_________|         |_________|         |   DAC1      a
+	a          _         _         _         _         _         _                 a
+	a_________| |_______| |_______| |_______| |_______| |_______| |___   ADC clock a
+	a          ____      ____      ____      ____      ____      ____              a
+	a_________|    |____|    |____|    |____|    |____|    |____|    |   TIOA0     a
+	a                                                                              a
 
 
 DACC send out the signal after 25 clocks, so we start DAC 25 clocks earlier than ADC.
