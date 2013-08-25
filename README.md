@@ -32,11 +32,11 @@ The black box can be any thing:
 Ingredients
 -----------
 
-1 - Arduino Due and its softwares
-2 - A Linux based PC 
-3 - Python(<3.0), Numpy, Matplotlib and pySerial
-4 - and of curse, A Black Box, to experiment with, 
-5 - and necessary hardwares to protect your Black Box and Arduino against over voltage and over loads.
+1.  Arduino Due and its softwares
+2.  A Linux based PC 
+3.  Python(2.7), Numpy, Matplotlib and pySerial
+4.  and of curse, A Black Box, to experiment with, 
+5.  and necessary hardwares to protect your Black Box and Arduino against over voltage and over loads.
 
 __Take number 5 seriously__, if now, you may damage your Arduino or your brand new Hi-Fi.
 
@@ -52,19 +52,17 @@ Limitations
 Instructions
 ============
 
-1 - Upload the Arduino Code, snowWhiteNoise.ino to your Arduino Due.
-2 - Connect your Arduino via Native USB port to PC.
-3 - Connect the input of your BlackBox to DAC1 and GND pin of Arduino board via necessary circuits.
-4 - Connect the output of your BlackBox to A7 and GND pin of Arduino board via necessary circuits.
-5 - Edit the number of samples and sampling rate in snowWhiteNoise.py, if needed.
-6 - Run snowWhiteNoise.py on your PC.
+1. Upload the Arduino Code, snowWhiteNoise.ino to your Arduino Due.
+2. Connect your Arduino via Native USB port to PC.
+3. Connect the input of your BlackBox to DAC1 and GND pin of Arduino board via necessary circuits.
+4. Connect the output of your BlackBox to A7 and GND pin of Arduino board via necessary circuits.
+5. Edit the number of samples and sampling rate in snowWhiteNoise.py, if needed.
+6. Run snowWhiteNoise.py on your PC.
 `python snowWhiteNoise.py --serial-port /dev/ttyACM0`
 If every thing is right, you will see a graph. close it to see the next graph.
-7 - Make any change that you like in your Black Box and/or snowWhiteNoise.py and go to step 6. No need to reset Arduino.
+7. Make any change that you like in your Black Box and/or snowWhiteNoise.py and go to step 6. No need to reset Arduino.
 
 `/dev/ttyACM0` in step 6 might be different on your device.
-
-
 
 
 Parameters
@@ -92,7 +90,7 @@ To just give you a filling,
 
 * Your ears are responsive up to 20KHz,
 * Many acquisition devices works at 30KHz,
-* The sound card of your PC‌ is at best 196KHz.
+* The sound card of your PC is at best 196KHz.
 
 To change sampling rate, find this line:
 	samplingRate = 200000   # Sampling rate per second.
@@ -130,9 +128,9 @@ so producing a white noise is pretty strain forward.
 The diagram of our setup is like this:
 
 	TRNG -> DAC -> The BlackBox -> ADC
-	  |				|
-	  V				V
-	  PC				PC
+	  |                             |
+	  V                             V
+	  PC                            PC
 
 Where True Random Number Generator (TRNG), Digital to Analog Converter (DAC) 
 and Analog to Digital Converter are inside Arduino.
@@ -167,15 +165,15 @@ different (TIOA0 and TIOA0).
 * TIOA0 controls ADC.
 The relation between the clocks are:
 
-	   ______    ______    ______    ______    ______    ______    _ 
-	__|      |__|      |__|      |__|      |__|      |__|      |__|     TIOA1   
-	     _________                     _________
-	    |         |_________          |         |          _________
-	____|                   |_________|         |_________|         |   DAC1
-	          _         _         _         _         _         _
-	_________| |_______| |_______| |_______| |_______| |_______| |___   ADC clock
-	          ____      ____      ____      ____      ____      ____
-	_________|    |____|    |____|    |____|    |____|    |____|    |   TIOA0
+	`   ______    ______    ______    ______    ______    ______    _ `
+	`__|      |__|      |__|      |__|      |__|      |__|      |__|     TIOA1`
+	`     _________                     _________  
+	`    |         |_________          |         |          _________`
+	`____|                   |_________|         |_________|         |   DAC1`
+	`          _         _         _         _         _         _`
+	`_________| |_______| |_______| |_______| |_______| |_______| |___   ADC clock`
+	`          ____      ____      ____      ____      ____      ____`
+	`_________|    |____|    |____|    |____|    |____|    |____|    |   TIOA0`
 	
 
 
