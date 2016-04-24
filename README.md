@@ -18,6 +18,8 @@ I wrote this codes to test my home made preamp. I have got the inspiration while
 Hand-on research in complex systems.
 <http://www.handsonresearch.org/>
 
+This code uses DMA so it is fast and can handle sampling rates up to 200kHz.
+I followed @pklaus code to handle buffers and use DMA and ADC.
 
 The Black Box
 -------------
