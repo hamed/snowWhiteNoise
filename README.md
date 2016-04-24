@@ -1,6 +1,8 @@
 
 Snow White Noise and the Black Box
 ==================================
+[![DOI](https://zenodo.org/badge/21629/hamed/snowWhiteNoise.svg)](https://zenodo.org/badge/latestdoi/21629/hamed/snowWhiteNoise)
+
 Hamed Seyed-allaei <hamed@ipm.ir>
 
 If you have got a __Black Box__ and you want to know its frequency response, 
