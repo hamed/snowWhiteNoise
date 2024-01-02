@@ -36,7 +36,7 @@ The black box can be any thing:
 Ingredients
 -----------
 
-1.  [Arduino Due](https://amzn.to/3YC6iJg) and its softwares
+1.  [Arduino Due](https://amzn.to/3RQJB10) and its softwares
 2.  A Linux based PC 
 3.  Python(2.7), Numpy, Matplotlib and pySerial
 4.  and of curse, A Black Box, to experiment with, 
@@ -126,7 +126,7 @@ An obvious choice for the InPut signal is sine wave, and like many other
 obvious choices in life, it is *boring*!
 We can do better than that, we can use white noise instead. It will give you 
 better result for the same amount of data points, in a wider range of frequencies. 
-The good news is that [Arduino Due](https://amzn.to/3YC6iJg) has an on-chip True Random Number Generator, 
+The good news is that [Arduino Due](https://amzn.to/3RQJB10) has an on-chip True Random Number Generator, 
 so producing a white noise is pretty strain forward.
 
 The diagram of our setup is like this:
